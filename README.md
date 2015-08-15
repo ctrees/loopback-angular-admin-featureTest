@@ -1,3 +1,14 @@
+# loopback-angular-admin-featureTest (cathack of ctrees/MinkExtension-example)
+
+1. Initial Setup
+    - curl http://getcomposer.org/installer | php
+    - php composer.phar install
+    - Fire up a local selenium server (http://127.0.0.1:4444/wd/hub) 
+    - bin/behat
+    - should
+
+---
+
 # A Behat 2.4 + Mink + 1.4 Demo
 
 ## Mink
