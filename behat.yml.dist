@@ -1,4 +1,29 @@
+# mod for po https://github.com/andrewlcg/behat_tutorial via http://capgemini.github.io/bdd/effective-bdd/
+# https://github.com/sensiolabs/BehatPageObjectExtension
 default:
+  context:
+    class:  'WebsiteFeatureContext'
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url:  'https://ctreesadmin.herokuapp.com'
+      default_session: selenium2
+      javascript_session: selenium2
+      goutte:    ~
+      selenium2: ~
+    SensioLabs\Behat\PageObjectExtension\Extension: ~
+
+# Change to ctrees site and mod
+ctreesadmin:
+  context:
+    class:  'InheritedFeatureContext'
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url:  'https://ctreesadmin.herokuapp.com'
+      goutte:    ~
+      selenium2: ~
+  
+# Original default
+original:
   context:
     class:  'InheritedFeatureContext'
   extensions:
