@@ -1,4 +1,5 @@
-# loopback-angular-admin-featureTest (cathack of ctrees/MinkExtension-example)
+# loopback-angular-admin-featureTest 
+cathack of [MinkExtension-example](https://github.com/ctrees/MinkExtension-example)
 
 1. Initial Setup
     - curl http://getcomposer.org/installer | php
