@@ -6,8 +6,38 @@ cathack of [MinkExtension-example](https://github.com/ctrees/MinkExtension-examp
     - php composer.phar install
     - Fire up a local selenium server (http://127.0.0.1:4444/wd/hub) 
     - bin/behat
-    - should
+    - should test https://ctreesadmin.herokuapp.com/
+    - restAPI browser https://ctreesadmin.herokuapp.com/explorer/
+2. Angular Client Hacks
+    - Point base_url to 'https://ctreesadmin.herokuapp.com' in behat.yml.dist
+    - comment out old feature in search.feature and add new feature to bottom
+    - Hack features/bootstrap/InheritedFeatureContext.php to make work
+    - To run: bin/behat
+    - To see Domain Language strings: bin/behat -dl
+    - Notes:
+        - click of non button does not work
+        - pick up on and test a javascript css change to confirm a user interaction
+        - may need to issue movemouse / hover stuff to activate user interaction??
+    - The end of Angular Client Hacks
+3. PageObject Model Test
+    - add behat-page-object-extension to composer.json (http://behat-page-object-extension.readthedocs.org/en/latest/guide/installation.html)
+    - add extension to behat.yml (http://behat-page-object-extension.readthedocs.org/en/latest/guide/installation.html)
+    - add page and element namespace locations to behat.yml (http://behat-page-object-extension.readthedocs.org/en/latest/guide/configuration.html)
+    
 
+## Random Stuff
+- https://alfrednutile.info/posts/57
+- http://stackoverflow.com/questions/15182000/behat-mink-unable-to-simulate-click-on-button-in-footer
+- http://www.w3schools.com/cssref/css_selectors.asp
+- http://stackoverflow.com/questions/13365910/can-i-make-behat-zombiejs-mink-simulate-a-click-on-a-non-link-element-to-fire
+- http://mink.behat.org/en/latest/guides/traversing-pages.html#traversal-methods
+- http://docs.behat.org/en/v2.5/cookbook/using_the_profiler_with_minkbundle.html
+- https://github.com/sreedevivedula/wdjs_first_test/blob/master/spec/mifos_login_spec_pass_1.js
+- https://github.com/sensiolabs/BehatPageObjectExtension
+- https://github.com/andrewlcg/behat_tutorial/blob/master/features/bootstrap/Page/SignupPage.php
+- http://capgemini.github.io/bdd/effective-bdd/
+- https://alfrednutile.info/posts/151
+- https://www.heroku.com
 ---
 
 # A Behat 2.4 + Mink + 1.4 Demo

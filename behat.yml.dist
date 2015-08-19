@@ -1,7 +1,19 @@
 default:
   context:
-    class:  'InheritedFeatureContext'
+#    class:  'InheritedFeatureContext'
+    class:  'PageFeatureContext'
+  filters:
+    tags:      '@restapi'
   extensions:
+    SensioLabs\Behat\PageObjectExtension:
+      namespaces:
+        page: [features\Ppage]
+        element: [features\Page\Element]
+#      factory:
+#        id: ctrees.page_object.factory
+#        page_parameters:
+#          base_url:  'https://ctreesadmin.herokuapp.com'
+#          base_url: http://localhost
     Behat\MinkExtension\Extension:
 #      base_url:  'http://en.wikipedia.org/'
       base_url:  'https://ctreesadmin.herokuapp.com'
