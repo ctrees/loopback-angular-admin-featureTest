@@ -1,14 +1,14 @@
 default:
   context:
-#    class:  'InheritedFeatureContext'
-    class:  'PageFeatureContext'
-  filters:
-    tags:      '@restapi'
+    class:  'InheritedFeatureContext'
+#    class:  'PageFeatureContext'
+#  filters:
+#    tags:      '@restapi'
   extensions:
-    SensioLabs\Behat\PageObjectExtension:
-      namespaces:
-        page: [features\Ppage]
-        element: [features\Page\Element]
+#    SensioLabs\Behat\PageObjectExtension:
+#      namespaces:
+#        page: [features\Page]
+#        element: [features\Page\Element]
 #      factory:
 #        id: ctrees.page_object.factory
 #        page_parameters:
